@@ -14,20 +14,28 @@ def button_click(number):
 	input_field.insert(0, str(current) + str(number))
 
 def button_add():
-	global first_number
+	global first_number, operation
 	first_number  = int(input_field.get())
+	operation = "addition"
 	input_field.delete(0,END)
-
-def equals():
-	second_number = int(input_field.get())
-	input_field.delete(0,END)
-	input_field.insert(0, first_number + second_number)
 
 
 def clear():
 	input_field.delete(0,END)
 
+def subtract():
+	global first_number, operation
+	first_number  = int(input_field.get())
+	operation = "subtract"
+	input_field.delete(0,END)
 
+def equals():
+	second_number = int(input_field.get())
+	input_field.delete(0,END)
+	if operation == "addition":
+		input_field.insert(0, first_number + second_number)
+	if operation == "subtract":
+		input_field.insert(0, first_number - second_number)
 
 
 number_1 = Button(root, text = "1", width = 5, command=lambda: button_click(1))
@@ -39,9 +47,9 @@ number_6 = Button(root, text = "6", width = 5, command=lambda: button_click(6))
 number_7 = Button(root, text = "7", width = 5, command=lambda: button_click(7))
 number_8 = Button(root, text = "8", width = 5, command=lambda: button_click(8))
 number_9 = Button(root, text = "9", width = 5, command=lambda: button_click(9))
-number_0 = Button(root, text = "0", width = 10, command=lambda: button_click(0))
+number_0 = Button(root, text = "0", width = 5, command=lambda: button_click(0))
 number_add = Button(root, text = "+", width = 5, command = button_add)
-number_subtract = Button(root, text = "-", width = 5)
+number_subtract = Button(root, text = "-", width = 5, command = subtract)
 number_multiply = Button(root, text = "*", width = 5)
 number_divide = Button(root, text = "/", width = 5)
 equal_button = Button(root, text = "=", width = 5, command = equals)
