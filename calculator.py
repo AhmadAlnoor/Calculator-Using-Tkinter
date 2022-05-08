@@ -35,6 +35,12 @@ def multiply():
 	operation = "multiply"
 	input_field.delete(0,END)
 
+def division():
+	global first_number, operation
+	first_number  = int(input_field.get())
+	operation = "division"
+	input_field.delete(0,END)	
+
 def equals():
 	second_number = int(input_field.get())
 	input_field.delete(0,END)
@@ -44,6 +50,8 @@ def equals():
 		input_field.insert(0, first_number - second_number)
 	if operation == "multiply":
 		input_field.insert(0, first_number * second_number)
+	if operation == "division":
+		input_field.insert(0, first_number / second_number)
 
 
 number_1 = Button(root, text = "1", width = 5, command=lambda: button_click(1))
@@ -59,7 +67,7 @@ number_0 = Button(root, text = "0", width = 5, command=lambda: button_click(0))
 number_add = Button(root, text = "+", width = 5, command = button_add)
 number_subtract = Button(root, text = "-", width = 5, command = subtract)
 number_multiply = Button(root, text = "*", width = 5, command = multiply)
-number_divide = Button(root, text = "/", width = 5)
+number_divide = Button(root, text = "/", width = 5, command = division)
 equal_button = Button(root, text = "=", width = 5, command = equals)
 dot_button = Button(root, text = ".", width = 5)
 sign_button = Button(root, text = "+/-", width = 5)
@@ -85,10 +93,11 @@ number_multiply.grid(row = 1, column = 3, padx = 4, pady = 4)
 sign_button.grid(row = 4, column = 0, padx = 4,pady = 4)
 number_0.grid(row = 4, column = 1, padx = 4,pady = 4)
 dot_button.grid(row = 4, column = 2, padx = 4,pady = 4)
-equal_button.grid(row = 4, column = 3, padx = 4,pady = 4)
+number_divide.grid(row = 4, column = 3, padx = 4, pady = 4)
 
-clear_button.grid(row = 5, column = 0, columnspan = 4)
 
+clear_button.grid(row = 5, column = 0, columnspan = 3)
+equal_button.grid(row = 5, column = 3, padx = 4,pady = 4)
 
 
 
