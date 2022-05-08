@@ -15,7 +15,7 @@ def button_click(number):
 
 def button_add():
 	global first_number, operation
-	first_number  = int(input_field.get())
+	first_number  = float(input_field.get())
 	operation = "addition"
 	input_field.delete(0,END)
 
@@ -42,7 +42,7 @@ def division():
 	input_field.delete(0,END)	
 
 def equals():
-	second_number = int(input_field.get())
+	second_number = float(input_field.get())
 	input_field.delete(0,END)
 	if operation == "addition":
 		input_field.insert(0, first_number + second_number)
@@ -69,7 +69,7 @@ number_subtract = Button(root, text = "-", width = 5, command = subtract)
 number_multiply = Button(root, text = "*", width = 5, command = multiply)
 number_divide = Button(root, text = "/", width = 5, command = division)
 equal_button = Button(root, text = "=", width = 5, command = equals)
-dot_button = Button(root, text = ".", width = 5)
+dot_button = Button(root, text = ".", width = 5,command =lambda: button_click("."))
 sign_button = Button(root, text = "+/-", width = 5)
 clear_button = Button(root, text = "clear",width = 30, background = 'white', command = clear)
 
