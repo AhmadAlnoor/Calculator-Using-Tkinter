@@ -26,7 +26,7 @@ The GUI buttons have been made larger to provide extra space for the user to cli
 
 The following image shows the calculator GUI.
 
-![image](https://user-images.githubusercontent.com/91766592/168499625-5e21cfb4-d929-48d7-b3f1-0f9e70669c35.png)
+![image](https://user-images.githubusercontent.com/91766592/168499897-9393e2eb-78ff-4c5e-9b22-83423cc39fa4.png)
 
 
 
