@@ -54,24 +54,23 @@ def equals():
 		input_field.insert(0, first_number / second_number)
 
 
-number_1 = Button(root, text = "1", width = 5, command=lambda: button_click(1))
-number_2 = Button(root, text = "2", width = 5, command=lambda: button_click(2))
-number_3 = Button(root, text = "3", width = 5, command=lambda: button_click(3))
-number_4 = Button(root, text = "4", width = 5, command=lambda: button_click(4))
-number_5 = Button(root, text = "5", width = 5, command=lambda: button_click(5))
-number_6 = Button(root, text = "6", width = 5, command=lambda: button_click(6))
-number_7 = Button(root, text = "7", width = 5, command=lambda: button_click(7))
-number_8 = Button(root, text = "8", width = 5, command=lambda: button_click(8))
-number_9 = Button(root, text = "9", width = 5, command=lambda: button_click(9))
-number_0 = Button(root, text = "0", width = 5, command=lambda: button_click(0))
-number_add = Button(root, text = "+", width = 5, command = button_add)
-number_subtract = Button(root, text = "-", width = 5, command = subtract)
-number_multiply = Button(root, text = "*", width = 5, command = multiply)
-number_divide = Button(root, text = "/", width = 5, command = division)
-equal_button = Button(root, text = "=", width = 5, command = equals)
-dot_button = Button(root, text = ".", width = 5,command =lambda: button_click("."))
-sign_button = Button(root, text = "+/-", width = 5)
-clear_button = Button(root, text = "clear",width = 30, background = 'white', command = clear)
+number_1 = Button(root, text = "1", width = 8, height = 3, bg = "white", command=lambda: button_click(1))
+number_2 = Button(root, text = "2", width = 8, height = 3,bg = "white", command=lambda: button_click(2))
+number_3 = Button(root, text = "3", width = 8, height = 3,bg = "white", command=lambda: button_click(3))
+number_4 = Button(root, text = "4", width = 8, height = 3,bg = "white", command=lambda: button_click(4))
+number_5 = Button(root, text = "5", width = 8, height = 3,bg = "white", command=lambda: button_click(5))
+number_6 = Button(root, text = "6", width = 8, height = 3,bg = "white", command=lambda: button_click(6))
+number_7 = Button(root, text = "7", width = 8, height = 3,bg = "white", command=lambda: button_click(7))
+number_8 = Button(root, text = "8", width = 8, height = 3,bg = "white", command=lambda: button_click(8))
+number_9 = Button(root, text = "9", width = 8, height = 3,bg = "white", command=lambda: button_click(9))
+number_0 = Button(root, text = "0", width = 20, height = 3, bg = "white", command=lambda: button_click(0))
+number_add = Button(root, text = "+", width = 8, height = 3,bg = "#708090", command = button_add)
+number_subtract = Button(root, text = "-", width = 8, height = 3,bg = "#708090", command = subtract)
+number_multiply = Button(root, text = "*", width = 8, height = 3,bg = "#708090", command = multiply)
+number_divide = Button(root, text = "/", width = 8, height = 3,bg = "#708090", command = division)
+equal_button = Button(root, text = "=", width = 8,  height = 8, background = "#0055b3", command = equals)
+dot_button = Button(root, text = ".", width = 8, height = 3,bg = "#708090",command =lambda: button_click("."))
+clear_button = Button(root, text = "clear",width = 20, height = 3, bg = 'white', command = clear)
 
 
 
@@ -90,14 +89,15 @@ number_8.grid(row = 1, column = 1, padx = 4, pady = 4)
 number_9.grid(row = 1, column = 2, padx = 4, pady = 4)
 number_multiply.grid(row = 1, column = 3, padx = 4, pady = 4)
 
-sign_button.grid(row = 4, column = 0, padx = 4,pady = 4)
-number_0.grid(row = 4, column = 1, padx = 4,pady = 4)
+
+number_0.grid(row = 4, column = 0, padx = 2,pady = 2, columnspan = 2)
 dot_button.grid(row = 4, column = 2, padx = 4,pady = 4)
-number_divide.grid(row = 4, column = 3, padx = 4, pady = 4)
 
 
-clear_button.grid(row = 5, column = 0, columnspan = 3)
-equal_button.grid(row = 5, column = 3, padx = 4,pady = 4)
+
+clear_button.grid(row = 5, column = 0,padx = 2, pady = 2, columnspan = 2)
+equal_button.grid(row = 4, column = 3, padx = 4,pady = 4, rowspan = 2)
+number_divide.grid(row = 5, column = 2, padx = 4, pady = 4)
 
 
 
