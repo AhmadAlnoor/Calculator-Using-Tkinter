@@ -1,5 +1,5 @@
 # Title: Calculator-Using-Tkinter
-### Description : This repository consists of a simple calculator GUI that has been created using Python Tkinter
+### Description : This repository consists of a simple calculator GUI that has been created using Python Tkinter. File found in the master branch
 
 ## Introduction:
 The Simple Calculator GUI is created using Python Tkinter package. The GUI consists of:
